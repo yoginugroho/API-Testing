@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>TestNG:  EmployeeRestAPITest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>EmployeeRestAPITest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>41/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Apr 30 15:07:41 WIB 2020</td>
+</tr>
+<tr><td>Total time:</td><td>182 seconds (182512 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 0, 3, Vincent hN Rompies ME, vincentrompies08@gmail.com, Body 09</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 1, 3, Vincent GX Rompies Ly, vincentrompies99@gmail.com, Body 22</td>
+<td></td>
+<td>3</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 2, 3, Vincent hI Rompies AP, vincentrompies21@gmail.com, Body 91</td>
+<td></td>
+<td>1</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 3, 3, Vincent yz Rompies iZ, vincentrompies47@gmail.com, Body 64</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 4, 3, Vincent bd Rompies VA, vincentrompies39@gmail.com, Body 44</td>
+<td></td>
+<td>3</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 5, 3, Vincent MB Rompies FO, vincentrompies34@gmail.com, Body 72</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 6, 3, Vincent Va Rompies on, vincentrompies11@gmail.com, Body 55</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 7, 3, Vincent MR Rompies oo, vincentrompies36@gmail.com, Body 27</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 8, 3, Vincent cf Rompies oH, vincentrompies67@gmail.com, Body 94</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_001_Create_Comment.createComment()'><b>createComment</b><br>Test class: com.commentapi.testcases.TC_001_Create_Comment<br>Parameters: 9, 3, Vincent cg Rompies Yl, vincentrompies83@gmail.com, Body 18</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_001_Create_Comment@140c9f39</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 1, 3, Vincent hN Rompies ME, vincentrompies08@gmail.com, Update BodyBody 43</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 2, 3, Vincent GX Rompies Ly, vincentrompies99@gmail.com, Update BodyBody 45</td>
+<td></td>
+<td>1</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 3, 3, Vincent hI Rompies AP, vincentrompies21@gmail.com, Update BodyBody 18</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 4, 3, Vincent yz Rompies iZ, vincentrompies47@gmail.com, Update BodyBody 27</td>
+<td></td>
+<td>1</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 5, 3, Vincent bd Rompies VA, vincentrompies39@gmail.com, Update BodyBody 38</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 6, 3, Vincent MB Rompies FO, vincentrompies34@gmail.com, Update BodyBody 32</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 7, 3, Vincent Va Rompies on, vincentrompies11@gmail.com, Update BodyBody 40</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 8, 3, Vincent MR Rompies oo, vincentrompies36@gmail.com, Update BodyBody 64</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 9, 3, Vincent cf Rompies oH, vincentrompies67@gmail.com, Update BodyBody 90</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_005_Delete_Comment.deleteComment()'><b>deleteComment</b><br>Test class: com.commentapi.testcases.TC_005_Delete_Comment<br>Parameters: 10, 3, Vincent cg Rompies Yl, vincentrompies83@gmail.com, Update BodyBody 30</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_005_Delete_Comment@77eca502</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_002_Get_All_Comment.getAllComment()'><b>getAllComment</b><br>Test class: com.commentapi.testcases.TC_002_Get_All_Comment</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_002_Get_All_Comment@4d910fd6</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 1, 3, Vincent hN Rompies ME, vincentrompies08@gmail.com, Update BodyBody 33</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 2, 3, Vincent GX Rompies Ly, vincentrompies99@gmail.com, Update BodyBody 80</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 3, 3, Vincent hI Rompies AP, vincentrompies21@gmail.com, Update BodyBody 09</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 4, 3, Vincent yz Rompies iZ, vincentrompies47@gmail.com, Update BodyBody 35</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 5, 3, Vincent bd Rompies VA, vincentrompies39@gmail.com, Update BodyBody 68</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 6, 3, Vincent MB Rompies FO, vincentrompies34@gmail.com, Update BodyBody 25</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 7, 3, Vincent Va Rompies on, vincentrompies11@gmail.com, Update BodyBody 80</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 8, 3, Vincent MR Rompies oo, vincentrompies36@gmail.com, Update BodyBody 41</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 9, 3, Vincent cf Rompies oH, vincentrompies67@gmail.com, Update BodyBody 64</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_003_Get_Single_Comment.getSingleComment()'><b>getSingleComment</b><br>Test class: com.commentapi.testcases.TC_003_Get_Single_Comment<br>Parameters: 10, 3, Vincent cg Rompies Yl, vincentrompies83@gmail.com, Update BodyBody 06</td>
+<td></td>
+<td>1</td>
+<td>com.commentapi.testcases.TC_003_Get_Single_Comment@26275bef</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 1, 3, Vincent hN Rompies ME, vincentrompies08@gmail.com, Update BodyBody 44</td>
+<td></td>
+<td>3</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 2, 3, Vincent GX Rompies Ly, vincentrompies99@gmail.com, Update BodyBody 95</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 3, 3, Vincent hI Rompies AP, vincentrompies21@gmail.com, Update BodyBody 97</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 4, 3, Vincent yz Rompies iZ, vincentrompies47@gmail.com, Update BodyBody 28</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 5, 3, Vincent bd Rompies VA, vincentrompies39@gmail.com, Update BodyBody 86</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 6, 3, Vincent MB Rompies FO, vincentrompies34@gmail.com, Update BodyBody 95</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 7, 3, Vincent Va Rompies on, vincentrompies11@gmail.com, Update BodyBody 69</td>
+<td></td>
+<td>3</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 8, 3, Vincent MR Rompies oo, vincentrompies36@gmail.com, Update BodyBody 72</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 9, 3, Vincent cf Rompies oH, vincentrompies67@gmail.com, Update BodyBody 01</td>
+<td></td>
+<td>2</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+<tr>
+<td title='com.commentapi.testcases.TC_004_Update_Comment.updateComment()'><b>updateComment</b><br>Test class: com.commentapi.testcases.TC_004_Update_Comment<br>Parameters: 10, 3, Vincent cg Rompies Yl, vincentrompies83@gmail.com, Update BodyBody 14</td>
+<td></td>
+<td>3</td>
+<td>com.commentapi.testcases.TC_004_Update_Comment@7690781</td></tr>
+</table><p>
+</body>
+</html>

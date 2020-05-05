@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EmployeesRestAPISuite">
+<listeners>
+<listener class-name="com.commentapi.utilities.Listeners"/>
+</listeners>
+	<test thread-count="1" name="EmployeeRestAPITest" preserve-order="true">
+		<classes>
+			<class name="com.commentapi.testcases.TC_001_Create_Comment"/>
+			<class name="com.commentapi.testcases.TC_002_Get_All_Comment"/>
+			<class name="com.commentapi.testcases.TC_003_Get_Single_Comment"/>
+			<class name="com.commentapi.testcases.TC_004_Update_Comment"/>
+			<class name="com.commentapi.testcases.TC_005_Delete_Comment"/>
+		</classes>
+	</test>
+</suite>
