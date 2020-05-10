@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('API testing') {
       steps {
-        sh '''mvn clean install
-'''
+        sh '''cd logs
+cat RestApi.log'''
       }
     }
 
