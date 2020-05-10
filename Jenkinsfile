@@ -4,7 +4,7 @@ pipeline {
     stage('API testing') {
       steps {
         sh '''cd logs
-cat RestApi.log'''
+cat RestAPI.log'''
       }
     }
 
