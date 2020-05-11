@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('API testing') {
       steps {
-        sh 'sudo docker run hello-world'
+        sh 'docker run hello-world'
       }
     }
 
