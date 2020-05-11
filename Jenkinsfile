@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('API testing') {
       steps {
-        sh 'docker container start maven1 -w mvn clean install'
+        sh 'docker run -it --rm --name testing maven mvn clean install'
       }
     }
 
