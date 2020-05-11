@@ -6,7 +6,7 @@ pipeline {
         sh '''cat pom.xml
 docker container create --name maven maven
 docker cp . maven:/app
-docker run -i --name maven -w /app maven mvn clean install'''
+docker container start -w /app maven mvn clean install'''
       }
     }
 
