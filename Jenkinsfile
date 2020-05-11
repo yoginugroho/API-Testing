@@ -4,7 +4,9 @@ pipeline {
     stage('API testing') {
       steps {
         sh '''cat pom.xml
-docker run -i --rm --name testing -w /app maven cp . testing:/app  mvn clean install'''
+docker container create --name maven maven
+docker cp . maven:/app
+docker run -i --name maven -w /app maven mvn clean install'''
       }
     }
 
