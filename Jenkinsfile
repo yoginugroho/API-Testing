@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('API testing') {
       steps {
-        sh 'docker --version'
+        sh 'docker container start maven1'
       }
     }
 
