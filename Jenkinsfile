@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('API testing') {
       steps {
-        sh '''cd logs
-cat RestAPI.log'''
+        sh 'docker container start maven'
       }
     }
 
