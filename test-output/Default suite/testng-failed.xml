@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.commentapi.testcases.TC_001_Create_Comment">
+      <class name="com.api.testcases.TS_008_GetUserPaymentHistory">
         <methods>
-          <include name="createPost"/>
-          <include name="createComment" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
-          <include name="tearDown"/>
+          <include name="firstLogMessage"/>
           <include name="setUp"/>
-          <include name="createUser"/>
+          <include name="getProfileTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.commentapi.testcases.TC_001_Create_Comment -->
+      </class> <!-- com.api.testcases.TS_008_GetUserPaymentHistory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

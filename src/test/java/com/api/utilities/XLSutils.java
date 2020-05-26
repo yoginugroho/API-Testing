@@ -1,30 +1,29 @@
-package com.commentapi.utilities;
+package com.api.utilities;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.DataFormatter;
 
-//import org.apache.poi.ss.usermodel.Cell;
-//import org.apache.poi.ss.usermodel.CellStyle;
-//import org.apache.poi.ss.usermodel.Row;
-//import org.apache.poi.ss.usermodel.Sheet;
-//import org.apache.poi.ss.usermodel.Workbook;
-//import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class XLSutils {
-	public static FileInputStream fi;
-	public static FileOutputStream fo;
-	public static HSSFWorkbook wb;
-	public static HSSFSheet ws;
-	public static HSSFRow row;
-	public static HSSFCell cell;
+	private FileInputStream fi;
+	private FileOutputStream fo;
+	private HSSFWorkbook wb;
+	private HSSFSheet ws;
+	private HSSFRow row;
+	private HSSFCell cell;
 	
-	
-	public static int getRowCount(String xlfile,String xlsheet) throws IOException
+	public XLSutils() {
+		super();
+	}
+
+	public int getRowCount(String xlfile,String xlsheet) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new HSSFWorkbook(fi);
@@ -34,9 +33,9 @@ public class XLSutils {
 		fi.close();
 		return rowcount;		
 	}
-	
-	
-	public static int getCellCount(String xlfile,String xlsheet,int rownum) throws IOException
+
+
+	public int getCellCount(String xlfile,String xlsheet,int rownum) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new HSSFWorkbook(fi);
@@ -47,29 +46,24 @@ public class XLSutils {
 		fi.close();
 		return cellcount;
 	}
-	
-	public static String getCellData(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
+
+	public String getCellData(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new HSSFWorkbook(fi);
 		ws=wb.getSheet(xlsheet);
 		row=ws.getRow(rownum);
 		cell=row.getCell(colnum);
-		String data;
-		try 
-		{
-		//	data=cell.getStringCellValue();
-			data=cell.toString();
-		} catch (Exception e) 
-		{
-			data="";
-		}
+
+		DataFormatter formatter = new DataFormatter();
+		Object value = formatter.formatCellValue(cell);
+
 		wb.close();
 		fi.close();
-		return data;
+		return value.toString();
 	}
-	
-	public static void setCellData(String xlfile,String xlsheet,int rownum,int colnum,String data) throws IOException
+
+	public void setCellData(String xlfile,String xlsheet,int rownum,int colnum,String data) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new HSSFWorkbook(fi);
@@ -83,6 +77,20 @@ public class XLSutils {
 		fi.close();
 		fo.close();
 	}
-	
+
+	public Object[][] getAllCellData(String path, String sheetName, int startRow) throws IOException {
+		int rowNum = this.getRowCount(path, sheetName);
+		int rowColumn = this.getCellCount(path,sheetName,startRow);
+		Object[][] dataXLS=new Object[rowNum-startRow+1][rowColumn];
+		int counter=0;
+		for(int i=startRow;i<=rowNum;i++) {
+			for(int j=0;j<rowColumn;j++) {
+				dataXLS[counter][j]=this.getCellData(path,sheetName,i,j);
+			}
+			counter++;
+		}
+
+		return dataXLS;
+	}
 
 }

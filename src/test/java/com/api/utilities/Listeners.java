@@ -1,4 +1,4 @@
-package com.commentapi.utilities;
+package com.api.utilities;
 
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -17,7 +17,7 @@ public class Listeners extends TestListenerAdapter {
 
 	public void onStart(ITestContext testContext)
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/reports/myReport.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/reports/testReport.html");
 
 		htmlReporter.config().setDocumentTitle("Automation Report");
 		htmlReporter.config().setReportName("Rest API testing Report");
@@ -27,21 +27,22 @@ public class Listeners extends TestListenerAdapter {
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("Host name","localhost");
 		extent.setSystemInfo("Environtment","QA");
-		extent.setSystemInfo("user","pavan");
+		extent.setSystemInfo("user","muhammad yogie nugroho");
 
 	}
-
+	
 	public void onTestSuccess(ITestResult result)
 	{
 		test=extent.createTest(result.getName()); // create new entry in th report
-		test.log(Status.PASS,"Test Case PASSED is"+result.getName()); // send the passed information to the report with GREEN color highlighted
+		test.log(Status.PASS,"Test Case PASSED is "+result.getName());
+		
 	}
 
 	public void onTestFailure(ITestResult result) 
 	{
 		test=extent.createTest(result.getName()); 
-		test.log(Status.FAIL,"Test Case FAILED is"+result.getName());
-		test.log(Status.FAIL,"Test Case FAILED is"+result.getThrowable());
+		test.log(Status.FAIL,"Test Case FAILED is "+result.getName());
+		test.log(Status.FAIL,"Test Case FAILED is "+result.getThrowable());
 	}
 	
 	public void onFinish(ITestContext textContext) 

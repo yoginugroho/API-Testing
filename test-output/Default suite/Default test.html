@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 30 13:04:35 WIB 2020</td>
+<td>Started on:</td><td>Tue May 19 11:12:06 WIB 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (116 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16688 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,5 +67,38 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.testcases.TS_008_GetUserPaymentHistory.getProfileTest()'><b>getProfileTest</b><br>Test class: com.api.testcases.TS_008_GetUserPaymentHistory<br>Parameters: TC_118, Test Get User Profile API if user exist, Depend#83833833834, Success, 200, Payment history has successfully sent</td>
+<td></td>
+<td>4</td>
+<td>com.api.testcases.TS_008_GetUserPaymentHistory@3972a855</td></tr>
+<tr>
+<td title='com.api.testcases.TS_008_GetUserPaymentHistory.getProfileTest()'><b>getProfileTest</b><br>Test class: com.api.testcases.TS_008_GetUserPaymentHistory<br>Parameters: TC_119, Test Get User Profile API if user not exist, 1000, Fail, 404, Payment not found</td>
+<td></td>
+<td>3</td>
+<td>com.api.testcases.TS_008_GetUserPaymentHistory@3972a855</td></tr>
+<tr>
+<td title='com.api.testcases.TS_008_GetUserPaymentHistory.getProfileTest()'><b>getProfileTest</b><br>Test class: com.api.testcases.TS_008_GetUserPaymentHistory<br>Parameters: TC_120, Test Get User Profile API with invalid user id (contain alphabet), a, Fail, 400, JSON parse error</td>
+<td></td>
+<td>2</td>
+<td>com.api.testcases.TS_008_GetUserPaymentHistory@3972a855</td></tr>
+<tr>
+<td title='com.api.testcases.TS_008_GetUserPaymentHistory.getProfileTest()'><b>getProfileTest</b><br>Test class: com.api.testcases.TS_008_GetUserPaymentHistory<br>Parameters: TC_121, Test Get User Profile API with invalid user id (contain symbol), @, Fail, 400, JSON parse error</td>
+<td></td>
+<td>3</td>
+<td>com.api.testcases.TS_008_GetUserPaymentHistory@3972a855</td></tr>
+<tr>
+<td title='com.api.testcases.TS_008_GetUserPaymentHistory.getProfileTest()'><b>getProfileTest</b><br>Test class: com.api.testcases.TS_008_GetUserPaymentHistory<br>Parameters: TC_122, Test Get User Profile API with invalid user id (empty), , Fail, 404, Payment not found</td>
+<td></td>
+<td>2</td>
+<td>com.api.testcases.TS_008_GetUserPaymentHistory@3972a855</td></tr>
+</table><p>
 </body>
 </html>

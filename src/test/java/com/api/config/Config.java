@@ -1,7 +1,4 @@
-package com.commentapi.base;
-
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+package com.api.config;
 
 import java.util.ArrayList;
 
@@ -9,30 +6,29 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
-import com.api.models.Comment;
-import com.api.models.Post;
+import com.api.models.Bill;
 import com.api.models.User;
 
 
+public class Config {
 
-public class TestBase {
+	public static Logger logger;
+	public static String baseUrl;
+	public static String xlsTestFile;
+	public static String xlsReportFile;
+	public static ArrayList<User> users = new ArrayList<User>();
+	public static ArrayList<Bill> bills = new ArrayList<Bill>();
+	@BeforeClass
+	public static void setUp() {
+		baseUrl = "https://infinite-waters-35921.herokuapp.com/api/paystore";
+		//baseUrl="https://infinite-waters-35921.herokuapp.com/api/paystore";
+		xlsTestFile=System.getProperty("user.dir")+"/test-data/testData.xls";
+		logger = Logger.getLogger("Config");
+		PropertyConfigurator.configure("Log4j.properties");
+		logger.setLevel(Level.INFO);
 
-    public static RequestSpecification httpRequest;
-    public static Response response;
-    public String empID = "10";
-    
-    public static Logger logger;
-    public static ArrayList<User> users = new ArrayList<User>();
-	public static ArrayList<Comment> comments = new ArrayList<Comment>();
-	public static ArrayList<Post> posts = new ArrayList<Post>();
+	}
 
-    @BeforeClass
-    public void setUp() {
-
-        logger = Logger.getLogger("TestBase");
-        PropertyConfigurator.configure("Log4j.properties");
-        logger.setLevel(Level.INFO);
-       
-    }
 }
