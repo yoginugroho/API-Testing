@@ -7,8 +7,13 @@ import com.api.config.*;
 import com.api.models.*;
 import com.api.requesthandler.*;
 import com.api.utilities.XLSutils;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
+@Feature("Insert Payment")
 public class TS_006_InsertPayment extends Config{
 	
 	private BillHandler billRequestHandler = new BillHandler();
@@ -36,6 +41,7 @@ public class TS_006_InsertPayment extends Config{
 		return data;
 	}
 	
+	@Step("Create bill data..")
 	@Test(dataProvider="createBill-data")
 	public void createBillData(String telephoneOwner, String telephoneNumber, String month,
 			String amount, String status) {
@@ -45,7 +51,7 @@ public class TS_006_InsertPayment extends Config{
 		bills.add(new Bill(idBill,telephoneOwner,telephoneNumber,month,Double.parseDouble(amount),status));
 	}
 	
-	
+	@Description("Insert Payment Test with positive test/negative test")
 	@Test(dataProvider="getInsertPayment-data",dependsOnMethods= {"createBillData"})
 	public void insertPaymentTest(String testCaseId, String description, String idUser, 
 			String idBill, String idPaymentMethod, String balance, String expectedStatusCode, String expectedMessage) {

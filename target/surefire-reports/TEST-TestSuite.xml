@@ -1,107 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="7.618" tests="41" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="104.09" tests="30" errors="0" skipped="0" failures="1">
   <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="11.0.7+8-LTS"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib"/>
     <property name="gopherProxySet" value="false"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/nugrohomuh/eclipse-workspace/APITest5"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="user.country" value="ID"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/nugrohomuh/eclipse-workspace/APITest5"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/fz/3_z9c70n5wn6sb_qtnqr9pp5vwdbx5/T/"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Applications/apache-maven-3.6.3/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/nugrohomuh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="/Applications/apache-maven-3.6.3/conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="55.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.15.2"/>
-    <property name="library.jansi.path" value="/Applications/apache-maven-3.6.3/lib/jansi-native"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="user.home" value="/Users/nugrohomuh"/>
-    <property name="user.timezone" value="Asia/Jakarta"/>
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.specification.version" value="11"/>
-    <property name="user.name" value="nugrohomuh"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Applications/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="maven.conf" value="/Applications/apache-maven-3.6.3/conf"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ID"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -U clean install"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/Applications/apache-maven-3.6.3"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/nugrohomuh"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="11.0.7"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/Applications/apache-maven-3.6.3"/>
-    <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2020-04-14"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="java.vendor.version" value="18.9"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
+    <property name="user.name" value="nugrohomuh"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/fz/3_z9c70n5wn6sb_qtnqr9pp5vwdbx5/T/"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="user.dir" value="/Users/nugrohomuh/eclipse-workspace/Project Tagihan Telepon"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/nugrohomuh/eclipse-workspace/Project Tagihan Telepon"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/nugrohomuh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.7+8-LTS"/>
+    <property name="classworlds.conf" value="/Applications/apache-maven-3.6.3/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="library.jansi.path" value="/Applications/apache-maven-3.6.3/lib/jansi-native"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.537"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.422"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.452"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.453"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.493"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.65"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.499"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.298"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.44"/>
-  <testcase name="createComment" classname="com.commentapi.testcases.TC_001_Create_Comment" time="1.17"/>
-  <testcase name="getAllComment" classname="com.commentapi.testcases.TC_002_Get_All_Comment" time="1.34"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.484"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.367"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.484"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.727"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.283"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.438"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.387"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.317"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.616"/>
-  <testcase name="getSingleComment" classname="com.commentapi.testcases.TC_003_Get_Single_Comment" time="1.328"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.834"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.229"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.211"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.24"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.255"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.189"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.252"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.258"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.908"/>
-  <testcase name="updateComment" classname="com.commentapi.testcases.TC_004_Update_Comment" time="1.442"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.423"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.289"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.575"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="2.238"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.745"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.239"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.322"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.542"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="1.352"/>
-  <testcase name="deleteComment" classname="com.commentapi.testcases.TC_005_Delete_Comment" time="2.133"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="38.677"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.703"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.639"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="2.064"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.434"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.931"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.485"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.376"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.56"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.402"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.612"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.393"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.639"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="3.078"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.62"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.734"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="3.203">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;403&gt; but was &lt;201&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <201>.
+
+	at com.api.testcases.TS_001_CreateAccount.createAccountTest(TS_001_CreateAccount.java:80)
+]]></failure>
+    <system-out><![CDATA[createAccountTest test case started
+2020-05-26 16:04:53 INFO  Config:42 - 
+2020-05-26 16:04:53 INFO  Config:43 - 
+2020-05-26 16:04:53 INFO  Config:44 - Test Case ID :TC_017 - Description :Test Register Account API with invalid phone number (more than 12 digit)
+2020-05-26 16:04:53 INFO  Config:49 - Status code => 201
+2020-05-26 16:04:53 INFO  Config:50 - Content-type => application/json
+2020-05-26 16:04:53 INFO  Config:51 - Response body => {"data":{"idUser":341,"name":"Muhammad Yogie","email":"yoginugrohoo2@gmail.com","password":"Password123@","phoneNumber":"8383383383567","balance":200000.0,"token":2269},"message":"Account has successfully created","status":"201"}
+2020-05-26 16:04:55 INFO  Config:79 - Assert status code...
+The name of the testcase failed is :createAccountTest
+]]></system-out>
+  </testcase>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.557"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="3.403"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="3.193"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.5"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.351"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.482"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.523"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.662"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="3.002"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="8.069"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.541"/>
+  <testcase name="createAccountTest" classname="com.api.testcases.TS_001_CreateAccount" time="1.462"/>
+  <testcase name="cleanUp" classname="com.api.testcases.CleanUpEverything" time="3.626"/>
 </testsuite>

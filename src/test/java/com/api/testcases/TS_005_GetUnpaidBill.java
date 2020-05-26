@@ -8,8 +8,11 @@ import com.api.models.*;
 import com.api.requesthandler.*;
 import com.api.utilities.*;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 
+@Feature("Get Unpaid Bill")
 public class TS_005_GetUnpaidBill extends Config{
 	
 	private BillHandler billRequestHandler = new BillHandler();
@@ -35,6 +38,7 @@ public class TS_005_GetUnpaidBill extends Config{
 		return data;
 	}
 	
+	
 	@Test(dataProvider="createBill-data")
 	public void createBillData(String telephoneOwner, String telephoneNumber, String month,
 			String amount, String status) {
@@ -44,6 +48,7 @@ public class TS_005_GetUnpaidBill extends Config{
 		bills.add(new Bill(idBill,telephoneOwner,telephoneNumber,month,Double.parseDouble(amount),status));
 	}
 	
+	@Description("Get Unpaid Bill Test with positive test/negative test")
 	@Test(dataProvider="getUnpaidBill-data", dependsOnMethods={"createBillData"})
 	public void getUnpaidBillTest(String testCaseId, String description, String telephoneNumber, 
 			String expectedStatus, String expectedStatusCode, String expectedMessage ) {

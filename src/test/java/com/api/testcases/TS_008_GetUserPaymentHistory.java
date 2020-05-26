@@ -6,8 +6,11 @@ import org.testng.annotations.*;
 import com.api.config.*;
 import com.api.requesthandler.*;
 import com.api.utilities.*;
+
+import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 
+@Feature("Get User Payment History")
 public class TS_008_GetUserPaymentHistory extends Config {
 	private UserHandler userRequestHandler = new UserHandler();
 	private PaymentHandler paymentRequestHandler = new PaymentHandler();

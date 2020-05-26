@@ -13,8 +13,11 @@ import com.api.requesthandler.*;
 import com.api.utilities.*;
 import com.api.models.*;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 
+@Feature("Create Account")
 public class TS_001_CreateAccount extends Config {
 	private UserHandler userRequestHandler = new UserHandler();
 	
@@ -32,10 +35,10 @@ public class TS_001_CreateAccount extends Config {
 	}
 	
 	@Test(dataProvider="createAccount-data")
+	@Description("Create Account Test with positive test/negative test")
 	public void createAccountTest(String testCaseId, String description, 
 			String name, String email, String phoneNumber, String password, String expectedStatus, 
 			String expectedStatusCode, String expectedMessage ) {
-	
 		Response response;
 		response=userRequestHandler.createAccount(name, email, phoneNumber, password);
 		logger.info("");

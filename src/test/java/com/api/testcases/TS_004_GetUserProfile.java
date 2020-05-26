@@ -6,8 +6,11 @@ import org.testng.annotations.*;
 import com.api.config.Config;
 import com.api.requesthandler.*;
 import com.api.utilities.XLSutils;
-import io.restassured.response.Response;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.restassured.response.Response;
+@Feature("Get User Profile")
 public class TS_004_GetUserProfile extends Config {
 	private UserHandler userRequestHandler = new UserHandler();
 	private LocalHandler localRequestHandler = new LocalHandler();
@@ -26,6 +29,7 @@ public class TS_004_GetUserProfile extends Config {
 	}
 	
 	
+	@Description("Get User Profile Test with positive test/negative test")
 	@Test(dataProvider="getUserProfile-data")
 	public void getProfileTest(String testCaseId, String description, String idUser, 
 			String expectedStatus, String expectedStatusCode, String expectedMessage ) {

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="APISuite">
 <listeners>
-<listener class-name="com.api.utilities.Listeners"/>
+<listener class-name="com.api.utilities.AllureListener"/>
 </listeners>
 	<test thread-count="1" name="APITest" preserve-order="true">
 		<classes>
@@ -14,6 +14,7 @@
 			<class name="com.api.testcases.TS_006_InsertPayment"/>
 			<class name="com.api.testcases.TS_007_VerifyPayment"/>
 			<class name="com.api.testcases.TS_008_GetUserPaymentHistory"/>
+			<class name="com.api.testcases.TS_009_Logout"/>
 			<class name="com.api.testcases.CleanUpEverything"/>
 		</classes>
 	</test>

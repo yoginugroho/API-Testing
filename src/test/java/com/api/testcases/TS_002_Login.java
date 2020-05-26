@@ -7,8 +7,11 @@ import com.api.config.*;
 import com.api.requesthandler.*;
 import com.api.utilities.*;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 
+@Feature("Login")
 public class TS_002_Login extends Config{
 	
 	private UserHandler userRequestHandler = new UserHandler();
@@ -28,6 +31,7 @@ public class TS_002_Login extends Config{
 		return data;
 	}
 	
+	@Description("Login Test with positive test/negative test")
 	@Test(dataProvider="login-data")
 	public void loginTest(String testCaseId, String description, String phoneNumber, String password, 
 			String expectedStatus, String expectedStatusCode, String expectedMessage ) {

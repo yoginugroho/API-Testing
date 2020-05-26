@@ -6,8 +6,11 @@ import org.testng.annotations.*;
 import com.api.config.*;
 import com.api.requesthandler.*;
 import com.api.utilities.*;
-import io.restassured.response.Response;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.restassured.response.Response;
+@Feature("Send OTP")
 public class TS_003_SendOTP extends Config{
 	private UserHandler userRequestHandler = new UserHandler();
 
@@ -25,6 +28,7 @@ public class TS_003_SendOTP extends Config{
 	}
 	
 	
+	@Description("Send OTP Test with positive test/negative test")
 	@Test(dataProvider="sendOTP-data")
 	public void sendOTPTest(String testCaseId, String description, String phoneNumber, String email, 
 			String expectedStatus, String expectedStatusCode, String expectedMessage ) {

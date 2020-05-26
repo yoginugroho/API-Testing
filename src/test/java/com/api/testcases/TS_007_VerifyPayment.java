@@ -8,9 +8,13 @@ import com.api.config.*;
 import com.api.models.*;
 import com.api.requesthandler.*;
 import com.api.utilities.*;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-
+@Feature("Verify Payment")
 public class TS_007_VerifyPayment extends Config {
 	private BillHandler billRequestHandler = new BillHandler();
 	private PaymentHandler paymentRequestHandler = new PaymentHandler();
@@ -38,6 +42,7 @@ public class TS_007_VerifyPayment extends Config {
 		return data;
 	}
 	
+	@Step("Create Bill Data")
 	@Test(dataProvider="createBill-data")
 	public void createBillData(String telephoneOwner, String telephoneNumber, String month,
 			String amount, String status) {
@@ -47,6 +52,7 @@ public class TS_007_VerifyPayment extends Config {
 		bills.add(new Bill(idBill,telephoneOwner,telephoneNumber,month,Double.parseDouble(amount),status));
 	}
 	
+	@Step("Insert Payment")
 	@Test(dependsOnMethods= {"createBillData"})
 	public void insertSomePayment() {
 		Response response;
@@ -56,6 +62,7 @@ public class TS_007_VerifyPayment extends Config {
 		response=paymentRequestHandler.insertPayment(localRequestHandler.getIdUser("83833833834"), localRequestHandler.getIdBill("02433333333"), "2");
 	}
 	
+	@Description("Verify Payment Test with positive test/negative test")
 	@Test(dataProvider="verifyPayment-data", dependsOnMethods= {"insertSomePayment"})
 	public void verifyPaymentTest(String testCaseId, String description, String idUser, 
 			String idBill, String idPaymentMethod, String expectedStatusCode, String expectedMessage) {
