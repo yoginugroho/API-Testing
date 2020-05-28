@@ -43,7 +43,8 @@ public class AllureListener implements ITestListener{
     @Override		
     public void onTestStart(ITestResult Result)					
     {		
-    System.out.println(Result.getName()+" test case started");					
+    System.out.println(Result.getName()+" test case started");	
+    System.out.println(Result.getParameters().toString());
     }		
 
     // When Test case get passed, this method is called.		

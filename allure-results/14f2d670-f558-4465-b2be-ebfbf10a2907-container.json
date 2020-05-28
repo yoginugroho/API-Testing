@@ -1,0 +1,1 @@
+{"uuid":"14f2d670-f558-4465-b2be-ebfbf10a2907","name":"com.api.testcases.CleanUpEverything","children":["c5075aa5-2191-4c9a-9e9a-69b81645bd31"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1590627172759,"stop":1590627172760}],"afters":[],"links":[],"start":1590626861105,"stop":1590627223623}
